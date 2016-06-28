@@ -25,7 +25,7 @@ import com.xiaocoder.android_xcfw.io.XCSP;
 /**
  * @author xiaocoder
  * @email fengjingyu@foxmail.com
- * @description 初始化的顺序不要去改动
+ * @description
  */
 public class App extends Application {
 
