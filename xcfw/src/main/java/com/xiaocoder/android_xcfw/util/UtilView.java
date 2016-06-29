@@ -4,12 +4,14 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ExpandableListView;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 /**
  * @author xiaocoder
@@ -96,11 +98,16 @@ public class UtilView {
     /**
      * 进入页面就滑到最开始处
      */
-    private void scrollUp(final ScrollView view) {
+    public static void scrollUp(final ScrollView view) {
         view.post(new Runnable() {
             public void run() {
                 view.fullScroll(ScrollView.FOCUS_UP);
             }
         });
     }
+
+    public static void setMaxLength(TextView textView, int length) {
+        textView.setFilters(new InputFilter[]{new InputFilter.LengthFilter(length)});
+    }
+
 }
