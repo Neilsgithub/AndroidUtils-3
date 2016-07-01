@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="@color/c_trans"
+        android:background="@android:color/transparent"
         android:orientation="vertical">
 
         <Button
@@ -54,7 +54,7 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_gravity="right"
-            android:background="@color/blue"
+            android:background="@android:color/holo_blue_bright"
             android:text="图库" />
 
     </LinearLayout>

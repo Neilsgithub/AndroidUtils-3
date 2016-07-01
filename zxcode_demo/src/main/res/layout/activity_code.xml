@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/xc_id_code"
-        android:background="@color/c_blue_1988ea"
+        android:background="#1988ea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -18,7 +18,7 @@
     <ImageView
         android:layout_below="@+id/xc_id_code"
         android:id="@+id/xc_id_code_logo"
-        android:background="@color/c_blue_1988ea"
+        android:background="#1988ea"
         android:layout_width="200dp"
         android:layout_height="200dp" />
 

@@ -1,12 +1,10 @@
 package com.xiaocoder.android_zxcode_demo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-
-import com.xiaocoder.android_xcfw.util.UtilActivity;
 
 /**
  * @author xiaocoder

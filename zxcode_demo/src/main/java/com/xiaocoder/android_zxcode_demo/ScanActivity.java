@@ -34,8 +34,6 @@ import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
-import com.xiaocoder.android_xcfw.application.XCConstant;
-import com.xiaocoder.android_xcfw.io.XCLog;
 import com.xiaocoder.android_zxcode.camare.CameraManager;
 import com.xiaocoder.android_zxcode.decoding.CaptureActivityHandler;
 import com.xiaocoder.android_zxcode.decoding.IDecode;
@@ -103,7 +101,7 @@ public class ScanActivity extends FragmentActivity implements Callback, View.OnC
                     onResultHandler((String) msg.obj, scanBitmap);
                     break;
                 case PARSE_BARCODE_FAIL:
-                    XCLog.longToast(msg.obj);
+                    Toast.makeText(ScanActivity.this, msg.obj + "", Toast.LENGTH_SHORT).show();
                     break;
             }
         }
@@ -117,7 +115,7 @@ public class ScanActivity extends FragmentActivity implements Callback, View.OnC
             return null;
         }
         Hashtable<DecodeHintType, String> hints = new Hashtable<DecodeHintType, String>();
-        hints.put(DecodeHintType.CHARACTER_SET, XCConstant.ENCODING_UTF8); // 设置二维码内容的编码
+        hints.put(DecodeHintType.CHARACTER_SET, "utf-8"); // 设置二维码内容的编码
 
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
@@ -286,7 +284,6 @@ public class ScanActivity extends FragmentActivity implements Callback, View.OnC
             @Override
             public void onClick(View v) {
                 // 打开手机中的相册
-                XCLog.shortToast("rightclick");
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT); // "android.intent.action.GET_CONTENT"
                 intent.setType("image/*");
                 Intent wrapperIntent = Intent.createChooser(intent, "选择本地二维码图片");
@@ -315,7 +312,7 @@ public class ScanActivity extends FragmentActivity implements Callback, View.OnC
                     intent.setData(content_url);
                     startActivity(intent);
                 } else {
-                    XCLog.shortToast("该链接有误");
+                    Toast.makeText(ScanActivity.this, "该链接有误", Toast.LENGTH_SHORT).show();
                     onPause(); // 暂时实现连续扫描
                     try {
                         Thread.sleep(100);
@@ -367,7 +364,7 @@ public class ScanActivity extends FragmentActivity implements Callback, View.OnC
                         isFlashOpen = true;
                         v.setSelected(true);
                     } catch (Exception e) {
-                        XCLog.e(this, "", e);
+                        e.printStackTrace();
                     }
 
                 } else {
@@ -376,7 +373,7 @@ public class ScanActivity extends FragmentActivity implements Callback, View.OnC
                         isFlashOpen = false;
                         v.setSelected(false);
                     } catch (Exception e) {
-                        XCLog.e(this, "", e);
+                        e.printStackTrace();
                     }
                 }
                 end_timegap = start_timegap;
@@ -421,7 +418,7 @@ public class ScanActivity extends FragmentActivity implements Callback, View.OnC
                             }
                         }).start();
                     } else {
-                        XCLog.shortToast("解析数据有误");
+                        Toast.makeText(this, "解析数据有误", Toast.LENGTH_SHORT).show();
                     }
                     break;
             }

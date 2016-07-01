@@ -17,7 +17,7 @@ import android.widget.TextView;
  * @description
  */
 public class ScanResultDialog extends Dialog {
-    public static int TRAN_STYLE = R.style.xc_s_dialog;
+    public static int TRAN_STYLE = R.style.dialog;
 
     /**
      * 如果这里使用getLayoutInflater(),则获取不到双圈的dialog，用LayoutInflater.from可以

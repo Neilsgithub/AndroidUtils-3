@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- 透明的dialog背景-->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 无边界 ,否则会出现框框的线条 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 悬浮在activity上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 默认都是有title -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 这句不能少,否则还是有边框 -->
+    </style>
+
 </resources>

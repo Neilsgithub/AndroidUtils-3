@@ -47,6 +47,7 @@ public class TestActivity extends BaseActivity {
         testSecret();
         testJsonFormat();
         testLinkedBlockQueue();
+        testSubList();
     }
 
     private void testSp() {
@@ -224,6 +225,28 @@ public class TestActivity extends BaseActivity {
         }
 
         XCLog.i(UtilSystem.getDeviceId(this) + "--------------deviceId");
+    }
+
+    public void testSubList() {
+        List<TestModel> list = new ArrayList<>();
+        TestModel model = new TestModel();
+        TestModel model2 = new TestModel();
+        TestModel model3 = new TestModel();
+        TestModel model4 = new TestModel();
+
+        list.add(model);
+        list.add(model2);
+        list.add(model3);
+        list.add(model4);
+
+        List<TestModel> sub = list.subList(0, 2);
+
+        XCLog.i("list", list.size());//4
+        XCLog.i("list", sub.size());//2
+        XCLog.i("list", list.get(0));//相同@1234567
+        XCLog.i("list", sub.get(0));//相同@1234567
+        XCLog.i("list", list.get(1));//相同@0123456
+        XCLog.i("list", sub.get(1));//相同@0123456
     }
 
 

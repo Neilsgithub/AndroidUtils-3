@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="286dp"
     android:layout_height="wrap_content"
-    android:background="@drawable/xc_dd_bg_white_ffffff_5"
+    android:background="#ffffff"
     android:orientation="vertical">
 
     <TextView
@@ -11,14 +11,14 @@
         android:layout_height="wrap_content"
         android:gravity="bottom|center_horizontal"
         android:paddingTop="25dp"
-        android:textColor="@color/c_gray_333333"
+        android:textColor="#333333"
         android:textSize="16sp" />
 
     <View
         android:id="@+id/xc_id_dialog_query_title_line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/c_gray_bebebe"
+        android:background="#bebebe"
         android:visibility="gone" />
 
     <TextView
@@ -30,12 +30,14 @@
         android:paddingLeft="6dp"
         android:paddingRight="6dp"
         android:paddingTop="5dp"
-        android:textColor="@color/c_gray_666666"
+        android:textColor="#666666"
         android:textSize="16sp" />
 
     <View
         android:id="@+id/xc_id_dialog_query_body_line"
-        style="@style/xc_h_line_gray_bebebe_1" />
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#bebebe" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,21 +49,23 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/c_trans"
-            android:textColor="@drawable/xl_dd_selector_text_black"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <View
             android:id="@+id/xc_id_dialog_query_button_between_line"
-            style="@style/xc_v_line_gray_bebebe_1px" />
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#bebebe" />
 
         <Button
             android:id="@+id/xc_id_dialog_query_confirm"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/c_trans"
-            android:textColor="@drawable/xl_dd_selector_text_blue_1988ea"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
             android:textSize="16sp" />
     </LinearLayout>
 

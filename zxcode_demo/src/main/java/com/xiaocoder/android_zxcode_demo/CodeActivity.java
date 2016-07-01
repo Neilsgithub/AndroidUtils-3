@@ -1,10 +1,10 @@
 package com.xiaocoder.android_zxcode_demo;
 
 import android.app.Activity;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.xiaocoder.android_xcfw.util.UtilImage;
 import com.xiaocoder.android_zxcode.UtilGenerateCode;
 
 /**
@@ -26,7 +26,7 @@ public class CodeActivity extends Activity {
         ImageView imageviewLogo = (ImageView) findViewById(R.id.xc_id_code_logo);
 
         imageview.setImageBitmap(UtilGenerateCode.createCode("http://www.baidu.com/1234567890/1234567890/123456789/123456789/1234567/"));
-        imageviewLogo.setImageBitmap(UtilGenerateCode.createLogoCode("http://www.baidu.com/1234567890/1234567890/123456789/123456789/1234567/", 400, 400, UtilImage.drawableToBitmap(getResources().getDrawable(R.drawable.ic_launcher))));
+        imageviewLogo.setImageBitmap(UtilGenerateCode.createLogoCode("http://www.baidu.com/1234567890/1234567890/123456789/123456789/1234567/", 400, 400, ((BitmapDrawable)getResources().getDrawable(R.mipmap.ic_launcher)).getBitmap()));
     }
 
 }
