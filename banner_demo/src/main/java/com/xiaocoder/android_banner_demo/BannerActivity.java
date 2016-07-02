@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.xiaocoder.android_banner.XCBannerLayout;
-import com.xiaocoder.android_xcfw.io.XCLog;
 
 import java.util.HashMap;
 

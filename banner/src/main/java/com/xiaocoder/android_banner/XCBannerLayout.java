@@ -4,14 +4,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.FrameLayout;
 
-import com.daimajia.androidanimations.library.attention.StandUpAnimator;
 import com.daimajia.slider.library.Animations.BaseAnimationInterface;
-import com.daimajia.slider.library.Animations.ChildAnimationExample;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
-import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.R;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
