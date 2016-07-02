@@ -1,4 +1,4 @@
-package com.xiaocoder.android_xcfw.util;
+package com.xiaocoder.android_moveview;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -144,6 +144,12 @@ public class UtilScreen {
  * //            XCLog.i("button" ,"ev.getX()--"+ev.getX());
  * //            XCLog.i("button" ,"ev.getY()--"+ev.getY());
  * //            XCLog.i("button" ,"ev.getRawX()--"+ev.getRawX());
+ * <p/>
+ * 华为：荣耀6 density为3
+ * getScreenHeightPx
+ * <p/>
+ * 如果导航栏是开着的 screenHeight 为 1776px（包含了状态栏的高度，状态栏的高度为75px），导航栏的高度为144px
+ * 如果导航栏是关着的 screenHeight 为 1920px（包含了状态栏的高度，状态栏的高度为75px）
  */
 
 /**

@@ -8,8 +8,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.xiaocoder.android_xcfw.io.XCLog;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
 
 /**
  * @author xiaocoder
@@ -57,7 +55,7 @@ public class XCMoveView extends RelativeLayout {
             if (mListener != null) {
                 mListener.onClickListenerPlus(XCMoveView.this);
             }
-            XCLog.dShortToast("单击click");
+            //XCLog.dShortToast("单击click");
             return false;
         }
 
@@ -99,8 +97,8 @@ public class XCMoveView extends RelativeLayout {
                 locationRawY = getTop();
                 clickRawX = event.getRawX();
                 clickRawY = event.getRawY();
-                XCLog.i("down---locationRawX = " + locationRawX + "---locationRawY = " + locationRawY);
-                XCLog.i("down---clickRawX = " + clickRawX + "---clickRawY = " + clickRawY);
+                //XCLog.i("down---locationRawX = " + locationRawX + "---locationRawY = " + locationRawY);
+                //XCLog.i("down---clickRawX = " + clickRawX + "---clickRawY = " + clickRawY);
                 break;
             case MotionEvent.ACTION_MOVE:
 
@@ -114,8 +112,8 @@ public class XCMoveView extends RelativeLayout {
 
                 layout(rect.left, rect.top, rect.right, rect.bottom);
 
-                XCLog.i("move---offsetX = " + offsetX + "---offsetY = " + offsetY);
-                XCLog.i("move---rect.left = " + rect.left + "---rect.top = " + rect.top + "---rect.right" + rect.right + "---rect.bottom" + rect.bottom);
+                //XCLog.i("move---offsetX = " + offsetX + "---offsetY = " + offsetY);
+                //XCLog.i("move---rect.left = " + rect.left + "---rect.top = " + rect.top + "---rect.right" + rect.right + "---rect.bottom" + rect.bottom);
                 break;
             case MotionEvent.ACTION_UP:
                 checkBoundry();
