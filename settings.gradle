@@ -1,1 +1,1 @@
-include ':zxcode', ':moveview', ':ui_demo', ':ptr_demo', ':ptr', ':banner', ':zxcode_demo', ':scrollpager_demo', ':banner_demo', ':xcfw_demo', ':ui', ':moveview_demo', ':scrollpager', ':xcfw'
+include ':zxcode', ':ui_demo', ':ptr_demo', ':ptr', ':banner', ':zxcode_demo', ':scrollpager_demo', ':banner_demo', ':xcfw_demo', ':ui', ':scrollpager', ':xcfw'
