@@ -2,17 +2,17 @@ package com.xiaocoder.android_ui.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.xiaocoder.android_xcfw.function.adapter.XCBaseAdapter;
-import com.xiaocoder.android_xcfw.util.UtilString;
 import com.xiaocoder.android_ui.R;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class XCMenuDialog extends Dialog {
         void onClick(View view, String hint);
     }
 
-    public static int TRAN_STYLE = R.style.xc_s_dialog;
+    public static int TRAN_STYLE = R.style.trans_dialog;
 
     /*
      * 如果这里使用getLayoutInflater(),则获取不到双圈的dialog，用LayoutInflater.from可以
@@ -59,7 +59,7 @@ public class XCMenuDialog extends Dialog {
 
     public void update(String title, String[] items) {
 
-        if (UtilString.isBlank(title)) {
+        if (TextUtils.isEmpty(title)) {
             title_textview.setVisibility(View.GONE);
         } else {
             title_textview.setText(title);
@@ -70,22 +70,59 @@ public class XCMenuDialog extends Dialog {
         listview.setAdapter(adapter);
     }
 
-    public class ItemsAdapter extends XCBaseAdapter<String> implements View.OnClickListener{
+    public class ItemsAdapter extends BaseAdapter implements View.OnClickListener {
+
+        public List<String> list;
+        public Context context;
+
+        public List<String> getList() {
+            if (list == null) {
+                return list = new ArrayList<String>();
+            }
+            return list;
+        }
+
+        public void update(List<String> list) {
+            this.list = list;
+        }
+
+        @Override
+        public int getCount() {
+            if (list != null)
+                return list.size();
+            return 0;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            if (list != null) {
+                return list.get(position);
+            } else {
+                return null;
+            }
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
 
         public ItemsAdapter(Context context, List<String> list) {
-            super(context, list);
+            this.list = list;
+            this.context = context;
         }
 
         @Override
         public void onClick(View view) {
-            if(listener != null){
+            if (listener != null) {
                 listener.onClick(view, ((Button) view).getText().toString().trim());
             }
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup viewGroup) {
-            bean = list.get(position);
+            String bean = list.get(position);
             ItemHolder holder = null;
 
             if (convertView == null) {

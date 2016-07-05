@@ -9,6 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <Button
+        android:id="@+id/drawer"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="test" />

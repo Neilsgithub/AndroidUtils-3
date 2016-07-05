@@ -22,7 +22,7 @@ import java.util.List;
  * @description 帧动画的dialog
  */
 public class XCFrameAnimVDialog extends Dialog {
-    public static int TRAN_STYLE = R.style.xc_s_dialog;
+    public static int TRAN_STYLE = R.style.trans_dialog;
 
     /**
      * 如果这里使用getLayoutInflater(),则获取不到双圈的dialog，用LayoutInflater.from可以
@@ -97,7 +97,7 @@ public class XCFrameAnimVDialog extends Dialog {
     }
 
     public void setWindowLayoutStyleAttr() {
-        dialogLayout.setBackgroundColor(mContext.getResources().getColor(R.color.c_trans));
+        dialogLayout.setBackgroundColor(0x00000000);
         setCanceledOnTouchOutside(true);
         Window window = getWindow();
         WindowManager.LayoutParams lp = window.getAttributes();

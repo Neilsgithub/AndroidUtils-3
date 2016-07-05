@@ -4,8 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
-import com.xiaocoder.android_xcfw.io.XCLog;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
+import com.xiaocoder.android_ui.Util;
 
 
 /**
@@ -39,10 +38,10 @@ public class SXInputMethodEventView extends RelativeLayout {
     }
 
     public void init(Context context) {
-        SOFTKEY_MAX_HEIGHT = UtilScreen.getScreenHeightPx(context) / 2;
-        SOFTKEY_MIN_HEIGHT = UtilScreen.dip2px(context, 100);
+        SOFTKEY_MAX_HEIGHT = Util.getScreenHeightPx(context) / 2;
+        SOFTKEY_MIN_HEIGHT = Util.dip2px(context, 100);
 
-        SCREEN_HEIGHT = UtilScreen.getScreenHeightPx(context);
+        SCREEN_HEIGHT = Util.getScreenHeightPx(context);
     }
 
     public SXInputMethodEventView(Context context) {
@@ -66,15 +65,15 @@ public class SXInputMethodEventView extends RelativeLayout {
 
         if (mInputMethodChangeLinstener != null) {
 
-            XCLog.i("http", "oldh=" + oldh + ", " + "h=" + h + ", " + "oldh - h=" + (oldh - h));
+            //XCLog.i("http", "oldh=" + oldh + ", " + "h=" + h + ", " + "oldh - h=" + (oldh - h));
 
             if (oldh - h > SOFTKEY_MIN_HEIGHT) {
-                XCLog.i("http", "onInputMethodOpen");
+                //XCLog.i("http", "onInputMethodOpen");
                 mInputMethodChangeLinstener.onInputMethodOpen(Math.abs(oldh - h));
             } else {
 
                 if (oldh != 0 && SCREEN_HEIGHT - h < SOFTKEY_MAX_HEIGHT && h - oldh > SOFTKEY_MIN_HEIGHT) {
-                    XCLog.i("http", "onInputMethodClose");
+                    //XCLog.i("http", "onInputMethodClose");
                     mInputMethodChangeLinstener.onInputMethodClose();
                 }
             }

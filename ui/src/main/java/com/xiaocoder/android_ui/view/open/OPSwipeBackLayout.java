@@ -6,17 +6,18 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.Scroller;
 
 
 import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.util.UtilCollections;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
+import com.xiaocoder.android_ui.Util;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -62,7 +63,7 @@ public class OPSwipeBackLayout extends FrameLayout {
 
         mShadowDrawable = getResources().getDrawable(R.drawable.swipeback_shadow_left);
 
-        screenHalfWidth = UtilScreen.getScreenSizeByMetric(context)[0] / 2;
+        screenHalfWidth = Util.getScreenSizeByMetric(context)[0] / 2;
     }
 
 
@@ -103,7 +104,7 @@ public class OPSwipeBackLayout extends FrameLayout {
                 if (isSlide(ev, moveX)) {
                     // 假设x方向手势滑动的距离大于系统定义的一个值
                     // 假设y方向手势滑动的距离小于系统定义的一个值
-                    if (UtilScreen.isTouchInsideView(mViews, ev, 60)) {
+                    if (Util.isTouchInsideView(mViews, ev, 60)) {
                         // 如果触碰到了集合里含的view，不拦截，也就是触摸事件继续下发到下一层控件
                         return false;
                     } else {
@@ -180,7 +181,7 @@ public class OPSwipeBackLayout extends FrameLayout {
 
     private void getConflictView(ViewGroup parent) {
 
-        if (UtilCollections.isListBlank(mClassNames)) {
+        if (mClassNames == null || mClassNames.isEmpty()){
             return;
         }
 

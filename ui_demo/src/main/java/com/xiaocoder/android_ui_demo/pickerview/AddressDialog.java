@@ -66,7 +66,7 @@ public class AddressDialog extends Dialog {
     }
 
     public AddressDialog(Context context, AddressModel data) {
-        super(context, com.xiaocoder.android_ui.R.style.xc_s_dialog);
+        super(context, R.style.trans_dialog);
         dialogInflater = LayoutInflater.from(context);
         mContext = context;
         mData = data;

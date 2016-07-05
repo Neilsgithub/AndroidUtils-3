@@ -3,7 +3,7 @@
     android:id="@+id/tab_scrollview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/c_white_ffffff"
+    android:background="#ffffff"
     android:scrollbars="none" >
 
     <LinearLayout

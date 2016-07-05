@@ -12,12 +12,10 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 
+import com.xiaocoder.android_ui.Util;
 import com.xiaocoder.android_ui.view.open.OPSlideBar;
 import com.xiaocoder.android_ui.view.xc.XCTitleLayout;
-import com.xiaocoder.android_xcfw.application.XCConstant;
-import com.xiaocoder.android_xcfw.function.adapter.XCBaseAdapterExpand;
-import com.xiaocoder.android_xcfw.io.XCLog;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
+import com.xiaocoder.android_ui_demo.adapter.XCBaseAdapterExpand;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -41,7 +39,7 @@ public class ExpandListActivity extends Activity {
 
     public TextView getTextView() {
         AbsListView.LayoutParams lp = new AbsListView.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, UtilScreen.dip2px(this, 60));
+                ViewGroup.LayoutParams.MATCH_PARENT, Util.dip2px(this, 60));
         TextView textView = new TextView(this);
         textView.setLayoutParams(lp);
         textView.setGravity(Gravity.CENTER_VERTICAL);
@@ -148,7 +146,7 @@ public class ExpandListActivity extends Activity {
         test_expandablelistview.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-                XCLog.shortToast(groupPosition);
+                //XCLog.shortToast(groupPosition);
                 return true;
             }
         });
@@ -184,7 +182,6 @@ public class ExpandListActivity extends Activity {
 
         title.setTitleCenter(true, "haha");
         title.getXc_id_titlebar_root_layout().setBackgroundColor(0xffff0000);
-        title.setTitleRight(true, R.drawable.xc_dd_selector_image);
     }
 
     public void setListeners() {
@@ -195,7 +192,7 @@ public class ExpandListActivity extends Activity {
             @Override
             public void onTouchingLetterChanged(String s) {
                 Integer position = adapter.getPositionFromLetter(s);
-                XCLog.dShortToast(position + "");
+                //XCLog.dShortToast(position + "");
                 if (position != null) {
                     test_expandablelistview.setSelection(position);
                 }
@@ -253,7 +250,7 @@ public class ExpandListActivity extends Activity {
                 view = getTextView();
             }
             if (viewGroup != null) {
-                XCLog.i(XCConstant.TAG_TEST, "getGroupView()---" + viewGroup.toString());
+                //XCLog.i(XCConstant.TAG_TEST, "getGroupView()---" + viewGroup.toString());
             }
             ((TextView) view).setText(getGroup(i).toString());
             return view;
@@ -265,7 +262,7 @@ public class ExpandListActivity extends Activity {
                 view = getTextView();
             }
             if (viewGroup != null) {
-                XCLog.i(XCConstant.TAG_TEST, "getChildView()---" + viewGroup.toString());
+                //XCLog.i(XCConstant.TAG_TEST, "getChildView()---" + viewGroup.toString());
             }
             ((TextView) view).setText(getChild(groupPosition, childPosition).toString());
             return view;

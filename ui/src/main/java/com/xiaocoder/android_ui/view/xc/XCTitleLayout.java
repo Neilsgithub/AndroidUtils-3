@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.util.UtilView;
+import com.xiaocoder.android_ui.Util;
 
 /**
  * @author xiaocoder
@@ -115,7 +115,7 @@ public class XCTitleLayout extends FrameLayout {
      * 设置title的中心的标题
      */
     public void setTitleCenter(boolean isCenterShow, String title) {
-        UtilView.setGone(isCenterShow, id_titlebar_center_textview);
+        Util.setGone(isCenterShow, id_titlebar_center_textview);
         id_titlebar_center_textview.setText(title);
     }
 
@@ -124,18 +124,18 @@ public class XCTitleLayout extends FrameLayout {
      * 如果是"返回" ,则为一个返回的图标+"返回"的字样
      */
     public void setTitleLeft(boolean isLeftShow, String left_text) {
-        UtilView.setGone(isLeftShow, id_titlebar_left_layout);
+        Util.setGone(isLeftShow, id_titlebar_left_layout);
         id_titlebar_left_textview.setText(left_text);
     }
 
     public void setTitleLeft(int left_drawable_id, String left_text) {
-        UtilView.setGone(true, id_titlebar_left_layout);
+        Util.setGone(true, id_titlebar_left_layout);
         id_titlebar_left_textview.setText(left_text);
         if (left_drawable_id > 0) {
             id_titlebar_left_imageview.setImageResource(left_drawable_id);
-            UtilView.setGone(true, id_titlebar_left_imageview);
+            Util.setGone(true, id_titlebar_left_imageview);
         } else {
-            UtilView.setGone(false, id_titlebar_left_imageview);
+            Util.setGone(false, id_titlebar_left_imageview);
         }
     }
 
@@ -158,7 +158,7 @@ public class XCTitleLayout extends FrameLayout {
      */
     public void setTitleRight(boolean isRightShow, int right_drawable_id) {
 
-        UtilView.setGone(isRightShow, id_titlebar_right_layout);
+        Util.setGone(isRightShow, id_titlebar_right_layout);
         id_titlebar_right_imageview.setBackgroundResource(right_drawable_id);
     }
 
@@ -168,21 +168,21 @@ public class XCTitleLayout extends FrameLayout {
      */
     public void setTitleRight2(boolean isRight2Show, int right2_drawable_id, String text) {
 
-        UtilView.setGone(isRight2Show, id_titlebar_right2_layout);
+        Util.setGone(isRight2Show, id_titlebar_right2_layout);
 
         if (right2_drawable_id > 0) {
             id_titlebar_right2_imageview.setBackgroundResource(right2_drawable_id);
-            UtilView.setGone(true, id_titlebar_right2_imageview);
+            Util.setGone(true, id_titlebar_right2_imageview);
         } else {
-            UtilView.setGone(false, id_titlebar_right2_imageview);
-            UtilView.setGone(false, id_titlebar_right2_imageview_layout);
+            Util.setGone(false, id_titlebar_right2_imageview);
+            Util.setGone(false, id_titlebar_right2_imageview_layout);
         }
 
         if (text != null) {
-            UtilView.setGone(true, id_titlebar_right2_textview);
+            Util.setGone(true, id_titlebar_right2_textview);
             id_titlebar_right2_textview.setText(text);
         } else {
-            UtilView.setGone(false, id_titlebar_right2_textview);
+            Util.setGone(false, id_titlebar_right2_textview);
         }
     }
 }

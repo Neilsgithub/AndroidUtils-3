@@ -14,7 +14,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
+import com.xiaocoder.android_ui.Util;
 
 /**
  * Created by songxin on 2015/9/6.
@@ -85,13 +85,13 @@ public class SXProgressView extends View {
     public SXProgressView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        min_size = (int) UtilScreen.dip2px(getContext(), 100);
-        default_text_size = UtilScreen.dip2px(getContext(), 16);
-        default_suffix_text_size = UtilScreen.dip2px(getContext(), 10);
-        default_suffix_padding = UtilScreen.dip2px(getContext(), 4);
+        min_size = (int) Util.dip2px(getContext(), 100);
+        default_text_size = Util.dip2px(getContext(), 16);
+        default_suffix_text_size = Util.dip2px(getContext(), 10);
+        default_suffix_padding = Util.dip2px(getContext(), 4);
         default_suffix_text = "%";
-        default_bottom_text_size = UtilScreen.dip2px(getContext(), 10);
-        default_stroke_width = UtilScreen.dip2px(getContext(), 6);
+        default_bottom_text_size = Util.dip2px(getContext(), 10);
+        default_stroke_width = Util.dip2px(getContext(), 6);
 
         TypedArray attributes = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ArcProgress, defStyleAttr, 0);
         initByAttributes(attributes);

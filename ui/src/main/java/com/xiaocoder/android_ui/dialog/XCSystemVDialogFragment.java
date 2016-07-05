@@ -2,11 +2,11 @@ package com.xiaocoder.android_ui.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,14 +14,13 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.io.XCLog;
 
 /**
  * @author xiaocoder
  * @email fengjingyu@foxmail.com
  * @description dialogFragment
  */
-public class XCSystemVDialogFragment extends DialogFragment {
+public class XCSystemVDialogFragment extends android.support.v4.app.DialogFragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -72,7 +71,7 @@ public class XCSystemVDialogFragment extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        setStyle(DialogFragment.STYLE_NO_TITLE, R.style.xc_s_dialog);
+        setStyle(DialogFragment.STYLE_NO_TITLE, R.style.trans_dialog);
         Dialog dialog = super.onCreateDialog(savedInstanceState);
         // dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCanceledOnTouchOutside(false);
@@ -91,13 +90,11 @@ public class XCSystemVDialogFragment extends DialogFragment {
     @Override
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
-        XCLog.itemp("onDismiss");
     }
 
     @Override
     public void onCancel(DialogInterface dialog) {
         super.onCancel(dialog);
-        XCLog.itemp("onCancel");
     }
 
     public interface NoticeDialogListener {

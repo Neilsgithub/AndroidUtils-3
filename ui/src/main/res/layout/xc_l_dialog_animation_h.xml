@@ -19,6 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
         android:text="加载中.."
-        android:textColor="@color/c_black_000000" />
+        android:textColor="#000000" />
 
 </LinearLayout>

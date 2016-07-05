@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="加载中.."
-        android:textColor="@color/c_white_ffffff"
+        android:textColor="#ffffff"
         android:textSize="16sp" />
 
 </LinearLayout>

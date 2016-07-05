@@ -10,9 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
+import com.xiaocoder.android_ui.Util;
 import com.xiaocoder.android_ui_demo.R;
-import com.xiaocoder.android_xcfw.io.XCLog;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
 
 /**
  * @author xiaocoder
@@ -43,10 +42,10 @@ public class PopActivity extends Activity {
         test_pop_button2 = (Button) findViewById(R.id.test_pop_button2);
         test_pop_button3 = (Button) findViewById(R.id.test_pop_button3);
 
-        reflectPopupWindow = new XCReflectPopupWindow(this, UtilScreen.getScreenWidthPx(this), UtilScreen.dip2px(this, 100));
+        reflectPopupWindow = new XCReflectPopupWindow(this, Util.getScreenWidthPx(this), Util.dip2px(this, 100));
 
         hintPopupWindow = new XCHintPopupWindow
-                (this, (int) (UtilScreen.getScreenWidthPx(this) / 2.3), ViewGroup.LayoutParams.WRAP_CONTENT);
+                (this, (int) (Util.getScreenWidthPx(this) / 2.3), ViewGroup.LayoutParams.WRAP_CONTENT);
 
         photoPopupWindow = new XCPhotoPopupWindow
                 (this, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -57,7 +56,7 @@ public class PopActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                reflectPopupWindow.showPopupWindow((View) (test_pop_button.getParent()), 0, -UtilScreen.dip2px(PopActivity.this, 100));
+                reflectPopupWindow.showPopupWindow((View) (test_pop_button.getParent()), 0, -Util.dip2px(PopActivity.this, 100));
             }
         });
 
@@ -71,26 +70,26 @@ public class PopActivity extends Activity {
         test_pop_button3.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                hintPopupWindow.showAtLocation(test_pop_button3, Gravity.CENTER_HORIZONTAL | Gravity.TOP, 0, UtilScreen.dip2px(PopActivity.this, 75));
+                hintPopupWindow.showAtLocation(test_pop_button3, Gravity.CENTER_HORIZONTAL | Gravity.TOP, 0, Util.dip2px(PopActivity.this, 75));
             }
         });
 
         hintPopupWindow.setOnHintPopupItemClickListener(new XCHintPopupWindow.OnHintPopupItemClickListener() {
             @Override
             public void hint1(TextView textview) {
-                XCLog.dShortToast("1");
+                //XCLog.dShortToast("1");
                 hintPopupWindow.dismiss();
             }
 
             @Override
             public void hint2(TextView textview) {
-                XCLog.dShortToast("2");
+                //XCLog.dShortToast("2");
                 hintPopupWindow.dismiss();
             }
 
             @Override
             public void hint3(TextView textview) {
-                XCLog.dShortToast("3");
+                //XCLog.dShortToast("3");
                 hintPopupWindow.dismiss();
             }
         });
@@ -98,25 +97,25 @@ public class PopActivity extends Activity {
         photoPopupWindow.setOnPhotoPopupItemClickListener(new XCPhotoPopupWindow.onPhotoPopupItemClickListener() {
             @Override
             public void onPhotoUpload() {
-                XCLog.dShortToast("1");
+                //XCLog.dShortToast("1");
                 photoPopupWindow.dismiss();
             }
 
             @Override
             public void onLocalAlbum() {
-                XCLog.dShortToast("2");
+                //XCLog.dShortToast("2");
                 photoPopupWindow.dismiss();
             }
 
             @Override
             public void onCancel() {
-                XCLog.dShortToast("3");
+                //XCLog.dShortToast("3");
                 photoPopupWindow.dismiss();
             }
 
             @Override
             public void onNetPrescription() {
-                XCLog.dShortToast("4");
+                //XCLog.dShortToast("4");
                 photoPopupWindow.dismiss();
             }
         });

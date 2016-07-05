@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
 
-import com.xiaocoder.android_xcfw.util.UtilScreen;
+import com.xiaocoder.android_ui.Util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,9 +55,9 @@ public class PFGridViewAdapter extends BaseAdapter{
 		this.context = context ;
 		this.numColumns = numColumns ;
 		//计算垂直间距
-		this.vSpacing = UtilScreen.dip2px(context, vSpacing) ;
+		this.vSpacing = Util.dip2px(context, vSpacing) ;
 		//计算水平间距
-		this.hSpacing = UtilScreen.dip2px(context, hSpacing) ;
+		this.hSpacing = Util.dip2px(context, hSpacing) ;
 		this.gridViewCallback = gridViewCallback ;
 		//初始化数据
 		changeData(null);

@@ -17,6 +17,6 @@
         android:layout_width="290dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/c_orange_f96b05" />
+        android:background="#f96b05" />
 
 </android.support.v4.widget.DrawerLayout>

@@ -26,7 +26,6 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.io.XCLog;
 
 /**
  * 圆形图片  注：不要与 imageloader里面的option设置中的RoundBitmap类一起使用
@@ -207,7 +206,7 @@ public class OPRoundedImageView extends ImageView {
             try {
                 d = rsrc.getDrawable(mResource);
             } catch (NotFoundException e) {
-                XCLog.e("SelectableRoundedImageView---Unable to find resource: " + mResource, e);
+                //XCLog.e("SelectableRoundedImageView---Unable to find resource: " + mResource, e);
                 // Don't try again.
                 mResource = 0;
             }
@@ -387,7 +386,7 @@ public class OPRoundedImageView extends ImageView {
                 if (bm != null) {
                     return new SelectableRoundedCornerDrawable(bm, r);
                 } else {
-                    XCLog.e("SelectableRoundedImageView---Failed to create bitmap from drawable!");
+                    //XCLog.e("SelectableRoundedImageView---Failed to create bitmap from drawable!");
                 }
             }
             return drawable;

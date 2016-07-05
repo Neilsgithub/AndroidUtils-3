@@ -10,7 +10,7 @@ import android.view.View;
 
 
 import com.xiaocoder.android_ui.view.pf.PFPagerSlidingTab;
-import com.xiaocoder.android_xcfw.function.adapter.XCAdapterViewPager;
+import com.xiaocoder.android_ui_demo.adapter.XCAdapterViewPager;
 
 import java.util.ArrayList;
 

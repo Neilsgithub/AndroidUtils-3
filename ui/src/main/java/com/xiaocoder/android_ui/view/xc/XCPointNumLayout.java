@@ -1,6 +1,7 @@
 package com.xiaocoder.android_ui.view.xc;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
@@ -8,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.util.UtilString;
 
 
 /**
@@ -54,14 +54,14 @@ public class XCPointNumLayout extends FrameLayout {
      */
     public void setDesAndNum(String desc, String num) {
 
-        if (!UtilString.isBlank(desc)) {
+        if (!TextUtils.isEmpty(desc)) {
             // 描述不为空
             id_text_content.setText(desc);
         } else {
             id_text_content.setText(BLANK);
         }
 
-        if (!UtilString.isBlank(num)) {
+        if (!TextUtils.isEmpty(num)) {
 
             // 数值不为空，可能是 11   ,   1.1，   .1   ,11.
             if (num.contains(SYMBOL_POINT)) {

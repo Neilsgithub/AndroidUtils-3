@@ -2,13 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/c_white_ffffff">
+    android:background="#ffffff">
 
     <ListView
         android:id="@+id/id_listview_2_gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/c_blue_288de5"
+        android:background="#288de5"
         android:divider="@null"
         android:fadingEdge="none"
         android:listSelector="@android:color/transparent"

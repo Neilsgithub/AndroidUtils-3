@@ -20,7 +20,7 @@ import com.xiaocoder.android_ui.R;
  * @description 旋转imageview
  */
 public class XCRotateDialog extends Dialog {
-    public static int TRAN_STYLE = R.style.xc_s_dialog;
+    public static int TRAN_STYLE = R.style.trans_dialog;
 
     /*
      * 如果这里使用getLayoutInflater(),则获取不到双圈的dialog，用LayoutInflater.from可以

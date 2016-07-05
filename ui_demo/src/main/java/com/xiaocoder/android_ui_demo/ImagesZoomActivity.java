@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import com.xiaocoder.android_ui.view.open.OPZoomImageView;
 import com.xiaocoder.android_ui.view.xc.XCZoomViewPager;
-import com.xiaocoder.android_xcfw.io.XCLog;
 
 import java.util.ArrayList;
 /**
@@ -60,7 +59,7 @@ public class ImagesZoomActivity extends Activity {
 
             @Override
             public void onImageClickListener(int position) {
-                XCLog.shortToast(position);
+                //XCLog.shortToast(position);
             }
         });
     }

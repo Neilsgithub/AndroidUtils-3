@@ -3,9 +3,9 @@ package com.xiaocoder.android_ui_demo.pickerview;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.xiaocoder.android_ui.Util;
 import com.xiaocoder.android_ui.view.sx.SXPickerView;
 import com.xiaocoder.android_ui_demo.R;
-import com.xiaocoder.android_xcfw.io.XCIOAndroid;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,7 +38,7 @@ public class PickerViewActivity extends AppCompatActivity {
 
     private AddressModel getAddressData() {
         try {
-            JSONObject obj = new JSONObject(XCIOAndroid.getStringFromRaw(this,R.raw.citydata));
+            JSONObject obj = new JSONObject(Util.getStringFromRaw(this,R.raw.citydata));
 
             AddressModel model = new AddressModel();
 

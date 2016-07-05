@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@color/c_white_ffffff"
+    android:background="#ffffff"
     android:orientation="vertical" >
 
     <View
@@ -18,7 +18,7 @@
         android:background="@drawable/xc_dd_bg_gray_bc202020_8"
         android:gravity="center"
         android:text="拍照上传"
-        android:textColor="@color/c_white_ffffff"
+        android:textColor="#ffffff"
         android:textSize="18sp" />
 
     <View
@@ -36,7 +36,7 @@
         android:background="@drawable/xc_dd_bg_gray_bc202020_8"
         android:gravity="center"
         android:text="本地相册"
-        android:textColor="@color/c_white_ffffff"
+        android:textColor="#ffffff"
         android:textSize="18sp" />
 
     <View
@@ -55,7 +55,7 @@
         android:gravity="center"
         android:text="从我的处方单选择"
         android:visibility="gone"
-        android:textColor="@color/c_gray_bc202020"
+        android:textColor="#bc202020"
         android:textSize="18sp" />
 
     <View
@@ -74,7 +74,7 @@
         android:background="@drawable/xc_dd_bg_gray_bc202020_8"
         android:gravity="center"
         android:text="取消"
-        android:textColor="@color/c_white_ffffff"
+        android:textColor="#ffffff"
         android:textSize="18sp" />
 
 </LinearLayout>

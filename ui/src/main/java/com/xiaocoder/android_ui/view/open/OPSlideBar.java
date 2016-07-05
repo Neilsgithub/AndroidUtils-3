@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
+import com.xiaocoder.android_ui.Util;
 
 /**
  * 字母滑动bar
@@ -49,7 +49,7 @@ public class OPSlideBar extends View {
         int width = getWidth();
         int singleHeight = height / b.length;
 
-        int screenHeight = UtilScreen.getScreenSizeByMetric(getContext())[1];
+        int screenHeight = Util.getScreenSizeByMetric(getContext())[1];
 
         for (int i = 0; i < b.length; i++) {
             paint.setColor(Color.rgb(33, 65, 98));

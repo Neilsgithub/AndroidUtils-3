@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:background="@color/c_white_ffffff"
+    android:background="#ffffff"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -20,7 +20,7 @@
             android:paddingBottom="2dp"
             android:paddingTop="6dp"
             android:text="$a"
-            android:textColor="@color/c_black_000000"
+            android:textColor="#000000"
             android:textSize="16sp"
             android:visibility="invisible" />
 
@@ -36,7 +36,7 @@
         android:id="@+id/xc_id_move_block_line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/c_red_ff0000"
+        android:background="#ff0000"
         android:visibility="invisible" />
 
 </LinearLayout>

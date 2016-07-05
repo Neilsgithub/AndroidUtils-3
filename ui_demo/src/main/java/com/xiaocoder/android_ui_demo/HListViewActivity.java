@@ -7,7 +7,7 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.xiaocoder.android_ui.view.pf.PFHorizontalListView;
-import com.xiaocoder.android_xcfw.function.adapter.XCAdapterTest;
+import com.xiaocoder.android_ui_demo.adapter.XCAdapterTest;
 
 /**
  * @author xiaocoder

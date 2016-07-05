@@ -14,7 +14,6 @@ import com.xiaocoder.android_ui.dialog.XCRotateDialog;
 import com.xiaocoder.android_ui.dialog.XCSystemHDialog;
 import com.xiaocoder.android_ui.dialog.XCSystemVDialog;
 import com.xiaocoder.android_ui.dialog.XCSystemVDialogFragment;
-import com.xiaocoder.android_xcfw.io.XCLog;
 
 import java.util.ArrayList;
 
@@ -136,7 +135,7 @@ public class DialogActivity extends FragmentActivity implements View.OnClickList
         menu_dialog.setOnDialogItemClickListener(new XCMenuDialog.OnDialogItemClickListener() {
             @Override
             public void onClick(View view, String hint) {
-                XCLog.shortToast(((Button) view).getText());
+                //XCLog.shortToast(((Button) view).getText());
             }
         });
         menu_dialog.show();
@@ -147,13 +146,13 @@ public class DialogActivity extends FragmentActivity implements View.OnClickList
         query_dialog.setOnDecideListener(new XCQueryDialog.OnDecideListener() {
             @Override
             public void confirm() {
-                XCLog.dShortToast("confirm");
+                //XCLog.dShortToast("confirm");
                 query_dialog.dismiss();
             }
 
             @Override
             public void cancle() {
-                XCLog.dShortToast("cancle");
+                //XCLog.dShortToast("cancle");
                 query_dialog.dismiss();
             }
         });

@@ -10,8 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
-import com.xiaocoder.android_xcfw.util.UtilView;
+import com.xiaocoder.android_ui.Util;
 
 
 /**
@@ -140,12 +139,12 @@ public class XCTabLayout extends LinearLayout implements View.OnClickListener {
         if (contents != null && per_line_size > 0) {
             Context context = getContext();
             // 计算每个item的宽度
-            int perWidth = (int) (UtilScreen.getScreenSizeByMetric(context)[0] / per_line_size);
+            int perWidth = (int) (Util.getScreenSizeByMetric(context)[0] / per_line_size);
             perItemWidth = perWidth;
             // 分隔线
-            int lineWidth = UtilScreen.dip2px(context, 1);
-            int lineMarginTop = UtilScreen.dip2px(context, line_margin_top);
-            int lineMarginBottom = UtilScreen.dip2px(context, line_margin_bottom);
+            int lineWidth = Util.dip2px(context, 1);
+            int lineMarginTop = Util.dip2px(context, line_margin_top);
+            int lineMarginBottom = Util.dip2px(context, line_margin_bottom);
             // 从第0个位置开始添加
             int position = 0;
             int index = 0;
@@ -156,10 +155,10 @@ public class XCTabLayout extends LinearLayout implements View.OnClickListener {
                 View xc_id_move_block_line = (View) item.findViewById(R.id.xc_id_move_block_line);
                 // textview显示的内容,null为不显示， “”与“1”显示
                 if (content == null) {
-                    UtilView.setGone(false, xc_id_move_block_text);
+                    Util.setGone(false, xc_id_move_block_text);
                 } else {
                     xc_id_move_block_text.setText(content);
-                    UtilView.setGone(true, xc_id_move_block_text);
+                    Util.setGone(true, xc_id_move_block_text);
                 }
 
                 if (imageUris != null && imageUris.length > 0) {
@@ -171,12 +170,12 @@ public class XCTabLayout extends LinearLayout implements View.OnClickListener {
                         if (onImageLoaderListener != null) {
                             onImageLoaderListener.onImageLoaderListener(xc_id_move_block_imageview, uri);
                         }
-                        UtilView.setGone(true, xc_id_move_block_imageview);
+                        Util.setGone(true, xc_id_move_block_imageview);
                     } else {
-                        UtilView.setGone(false, xc_id_move_block_imageview);
+                        Util.setGone(false, xc_id_move_block_imageview);
                     }
                 } else {
-                    UtilView.setGone(false, xc_id_move_block_imageview);
+                    Util.setGone(false, xc_id_move_block_imageview);
                 }
                 item.setTag(position);
                 item.setOnClickListener(this);
@@ -184,7 +183,7 @@ public class XCTabLayout extends LinearLayout implements View.OnClickListener {
                 LayoutParams ll = new LayoutParams(perWidth, LayoutParams.WRAP_CONTENT);
                 item.setLayoutParams(ll);
                 // 水平线的宽度
-                int gap_h_line = UtilScreen.dip2px(context, gap_margin);
+                int gap_h_line = Util.dip2px(context, gap_margin);
                 LayoutParams ll2 = (LayoutParams) xc_id_move_block_line.getLayoutParams();
                 ll2.setMargins(gap_h_line, 0, gap_h_line, 0);
                 xc_id_move_block_line.setLayoutParams(ll2);
@@ -245,9 +244,9 @@ public class XCTabLayout extends LinearLayout implements View.OnClickListener {
         TextView xc_id_move_block_text = (TextView) item.findViewById(R.id.xc_id_move_block_text);
         View xc_id_move_block_line = (View) item.findViewById(R.id.xc_id_move_block_line);
         if (isHiddenBlock) {
-            UtilView.setVisible(false, xc_id_move_block_line);
+            Util.setVisible(false, xc_id_move_block_line);
         } else {
-            UtilView.setVisible(true, xc_id_move_block_line);
+            Util.setVisible(true, xc_id_move_block_line);
         }
         xc_id_move_block_text.setTextColor(0xff288DE5);
         record_selected_position = position;
@@ -258,7 +257,7 @@ public class XCTabLayout extends LinearLayout implements View.OnClickListener {
         TextView xc_id_move_block_text = (TextView) item.findViewById(R.id.xc_id_move_block_text);
         View xc_id_move_block_line = (View) item.findViewById(R.id.xc_id_move_block_line);
         xc_id_move_block_text.setTextColor(0xff000000);
-        UtilView.setVisible(false, xc_id_move_block_line);
+        Util.setVisible(false, xc_id_move_block_line);
     }
 
     @Override

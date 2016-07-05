@@ -14,7 +14,7 @@ import com.xiaocoder.android_ui.view.open.OPCircleProgressBar;
 
 public class OPMaterialLoadingDialog extends Dialog {
 
-    public static int TRAN_STYLE = R.style.xc_s_dialog;
+    public static int TRAN_STYLE = R.style.trans_dialog;
 
     private LayoutInflater dialogInflater;
 
@@ -45,7 +45,7 @@ public class OPMaterialLoadingDialog extends Dialog {
     }
 
     public void setWindowLayoutStyleAttr() {
-        dialogLayout.setBackgroundColor(mContext.getResources().getColor(R.color.c_trans));
+        dialogLayout.setBackgroundColor(0x00000000);
         setCanceledOnTouchOutside(false);
         Window window = getWindow();
         WindowManager.LayoutParams lp = window.getAttributes();

@@ -25,7 +25,7 @@ public class XCPhotoPopupWindow extends XCBasePopupWindow implements View.OnClic
         super((ViewGroup) LayoutInflater.from(context).inflate(R.layout.pop_photo, null), width, height);
 
         setOutsideTouchable(true);
-        setAnimationStyle(R.style.xc_s_pop_from_down_to_up);
+        setAnimationStyle(R.style.pop);
         setFocusable(true);
         setBackgroundDrawable(new BitmapDrawable());
 

@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.xiaocoder.android_ui.R;
-import com.xiaocoder.android_xcfw.util.UtilScreen;
+
+import com.xiaocoder.android_ui.Util;
 
 import java.util.ArrayList;
 
@@ -52,7 +52,7 @@ public class YRSlideBar_V2 extends View {
     /** 初始化设置每个字高度 */
     public void init(){
         if (getContext() != null) {
-            density = UtilScreen.getScreenSizeByMetric(getContext())[2];
+            density = Util.getScreenSizeByMetric(getContext())[2];
             // 屏幕适配
             if (density >= 480) {
                 singleHeight = 40;
@@ -76,7 +76,7 @@ public class YRSlideBar_V2 extends View {
         if (b != null) {
             int width = getWidth();
             for (int i = 0; i < b.length; i++) {
-                paint.setColor(getResources().getColor(R.color.c_blue_2b98f6));
+                paint.setColor(0xff2b98f6);
                 paint.setTypeface(Typeface.DEFAULT_BOLD);
                 paint.setAntiAlias(true);
                 // 屏幕适配
@@ -120,7 +120,7 @@ public class YRSlideBar_V2 extends View {
                 break;
 
             default:
-                setBackgroundResource(R.color.c_gray_f0f1f5);
+                setBackgroundColor(0xfff0f1f5);
                 if (oldChoose != c) {
                     if (c >= 0 && c < b.length) {
                         if (listener != null) {
