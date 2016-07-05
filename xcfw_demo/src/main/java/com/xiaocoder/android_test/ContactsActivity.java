@@ -1,5 +1,7 @@
 package com.xiaocoder.android_test;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.xiaocoder.android_ui.dialog.XCSystemHDialog;
 import com.xiaocoder.android_xcfw.function.adapter.XCBaseAdapter;
 import com.xiaocoder.android_xcfw.function.thread.XCExecutor;
 import com.xiaocoder.android_xcfw.io.XCLog;
@@ -82,7 +83,7 @@ public class ContactsActivity extends BaseActivity {
         UtilView.setListViewStyle(contacts_listview, null, 1, false);
 
 
-        final XCSystemHDialog dialog = new XCSystemHDialog(this);
+        final Dialog dialog = new ProgressDialog(this);
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
 

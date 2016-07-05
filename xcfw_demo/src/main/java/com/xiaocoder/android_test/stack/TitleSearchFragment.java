@@ -9,17 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
-import com.xiaocoder.android_ui.view.open.OPClearEditText;
+import com.xiaocoder.android_test.R;
 import com.xiaocoder.android_xcfw.application.XCFragment;
 import com.xiaocoder.android_xcfw.function.searchdb.XCSearchRecordModel;
 import com.xiaocoder.android_xcfw.function.searchdb.XCSearchRecordModelDb;
 import com.xiaocoder.android_xcfw.io.XCLog;
 import com.xiaocoder.android_xcfw.util.UtilString;
 import com.xiaocoder.android_xcfw.util.UtilView;
-import com.xiaocoder.android_test.R;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ import java.util.List;
 @Deprecated
 public class TitleSearchFragment extends XCFragment implements View.OnClickListener {
 
-    OPClearEditText xc_id_fragment_search_edittext;
+    EditText xc_id_fragment_search_edittext;
     TextView xc_id_fragment_search_cancle;
     XCSearchRecordModelDb dao;
 

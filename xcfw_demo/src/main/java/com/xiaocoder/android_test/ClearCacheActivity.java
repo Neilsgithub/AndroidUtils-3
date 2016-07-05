@@ -1,15 +1,14 @@
 package com.xiaocoder.android_test;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
-import com.xiaocoder.android_ui.dialog.XCRotateDialog;
-import com.xiaocoder.android_xcfw.function.helper.XCCleanCacheHelper;
-import com.xiaocoder.android_xcfw.io.XCIOAndroid;
 import com.xiaocoder.android_test_middle.base.BaseActivity;
 import com.xiaocoder.android_test_middle.config.ConfigFile;
+import com.xiaocoder.android_xcfw.function.helper.XCCleanCacheHelper;
+import com.xiaocoder.android_xcfw.io.XCIOAndroid;
 
 import java.io.File;
 
@@ -37,7 +36,12 @@ public class ClearCacheActivity extends BaseActivity implements View.OnClickList
         clear = getViewById(R.id.clear);
         // 如果没有该dir会创建再返回，有则返回该dir
         dir = XCIOAndroid.createDirInAndroid(getApplicationContext(), ConfigFile.APP_ROOT);
-        helper = new XCCleanCacheHelper(new XCRotateDialog(this, R.drawable.ic_launcher), false);
+
+        ProgressDialog dialog = new ProgressDialog(this);
+        dialog.setTitle("测试");
+        dialog.setMessage("缓存清理中");
+
+        helper = new XCCleanCacheHelper(dialog, false);
     }
 
     public void setListeners() {

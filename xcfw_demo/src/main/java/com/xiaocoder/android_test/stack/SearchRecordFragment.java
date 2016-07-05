@@ -12,14 +12,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.xiaocoder.android_ui.view.open.OPKeyBoardLayout;
+import com.xiaocoder.android_test.R;
 import com.xiaocoder.android_xcfw.application.XCFragment;
 import com.xiaocoder.android_xcfw.function.adapter.XCBaseAdapter;
 import com.xiaocoder.android_xcfw.function.searchdb.XCSearchRecordModel;
 import com.xiaocoder.android_xcfw.function.searchdb.XCSearchRecordModelDb;
 import com.xiaocoder.android_xcfw.io.XCLog;
 import com.xiaocoder.android_xcfw.util.UtilView;
-import com.xiaocoder.android_test.R;
 
 import java.util.List;
 
@@ -157,7 +156,7 @@ public class SearchRecordFragment extends XCFragment implements View.OnClickList
 
             if (convertView == null) {
 
-                convertView = LayoutInflater.from(context).inflate(R.layout.xc_l_adapter_fragment_search_recoder_item, null);
+                convertView = LayoutInflater.from(context).inflate(R.layout.adapter_search_recoder_item, null);
                 holder = new SearchRecoderViewHolder();
                 holder.xc_id_adapter_search_recoder_item_textview = (TextView) convertView.findViewById(R.id.xc_id_adapter_search_recoder_item_textview);
                 holder.xc_id_adapter_search_recoder_item_delete = (ImageView) convertView.findViewById(R.id.xc_id_adapter_search_recoder_item_delete);
