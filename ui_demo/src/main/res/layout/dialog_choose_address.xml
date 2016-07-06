@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/create_address_frame" />
+            android:background="@mipmap/create_address_frame" />
     </RelativeLayout>
 
 </RelativeLayout>

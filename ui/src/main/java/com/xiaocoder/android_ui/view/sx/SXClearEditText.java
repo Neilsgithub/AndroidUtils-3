@@ -14,6 +14,7 @@ import android.widget.EditText;
 
 import com.xiaocoder.android_ui.R;
 
+
 /**
  * ClearEditText
  * 带小X的输入框，点击清空内容

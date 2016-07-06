@@ -73,4 +73,8 @@ public abstract class BaseDrawerActivity extends Activity {
     public void closeDrawer() {
         sx_id_drawer_layout.closeDrawer(sx_id_drawer_left_drawer);
     }
+
+    public boolean isOpen() {
+        return sx_id_drawer_layout.isDrawerOpen(sx_id_drawer_left_drawer);
+    }
 }

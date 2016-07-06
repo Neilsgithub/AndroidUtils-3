@@ -179,8 +179,8 @@ public class DialogActivity extends FragmentActivity implements View.OnClickList
 
     private void showAnimFrameVDialog() {
         ArrayList<Integer> list = new ArrayList<>();
-        list.add(R.drawable.test_1);
-        list.add(R.drawable.test_2);
+        list.add(R.mipmap.test_1);
+        list.add(R.mipmap.test_2);
         animframe_dialog_v = new XCFrameAnimVDialog(this, list, 150);
         animframe_dialog_v.getTextView().setText("test");
         animframe_dialog_v.show();
