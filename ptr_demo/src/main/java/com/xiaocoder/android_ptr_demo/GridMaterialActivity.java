@@ -2,6 +2,8 @@ package com.xiaocoder.android_ptr_demo;
 
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -9,7 +11,6 @@ import android.widget.GridView;
 
 import com.xiaocoder.android_ptr.XCIRefreshHandler;
 import com.xiaocoder.android_ptr.XCMaterialGridRefreshLayout;
-import com.xiaocoder.android_xcfw.util.UtilView;
 
 /**
  * @author xiaocoder
@@ -39,11 +40,16 @@ public class GridMaterialActivity extends Activity {
         xcGridRefreshLayout = (XCMaterialGridRefreshLayout) findViewById(R.id.xc_id_material_grid_refreshlayout);
 
         gridview = (GridView) xcGridRefreshLayout.getListView();
-        UtilView.setGridViewStyle(gridview, false, 1, 1, 2);
+        gridview.setCacheColorHint(Color.TRANSPARENT);
+        gridview.setSelector(new ColorDrawable(Color.TRANSPARENT));
+        gridview.setVerticalScrollBarEnabled(false);
+        gridview.setHorizontalSpacing(1);
+        gridview.setVerticalSpacing(1);
+        gridview.setNumColumns(2);
 
         xcGridRefreshLayout.getListView().setAdapter(adapter);
         // 零数据背景
-        xcGridRefreshLayout.setBgZeroHintInfo("无数据", "点击刷新", R.drawable.ic_launcher);
+        xcGridRefreshLayout.setBgZeroHintInfo("无数据", "点击刷新", R.mipmap.ic_launcher);
     }
 
 

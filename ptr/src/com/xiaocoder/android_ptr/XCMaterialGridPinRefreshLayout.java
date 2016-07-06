@@ -5,7 +5,6 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 
 
-import com.xiaocoder.android_xcfw.util.UtilScreen;
 
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.R;
@@ -43,7 +42,7 @@ public class XCMaterialGridPinRefreshLayout extends XCRefreshLayout {
         int[] colors = getResources().getIntArray(R.array.google_colors);
         header.setColorSchemeColors(colors);
         header.setLayoutParams(new PtrFrameLayout.LayoutParams(-1, -2));
-        header.setPadding(0, UtilScreen.dip2px(getContext(), 15), 0, UtilScreen.dip2px(getContext(), 10));
+        header.setPadding(0, Util.dip2px(getContext(), 15), 0, Util.dip2px(getContext(), 10));
         header.setPtrFrameLayout(mPtrRefreshLayout);
         mPtrRefreshLayout.setHeaderView(header);
         mPtrRefreshLayout.addPtrUIHandler(header);

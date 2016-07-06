@@ -1,1 +1,1 @@
-include ':zxcode', ':ui_demo', ':ptr_demo', ':ptr', ':banner', ':zxcode_demo', ':banner_demo', ':ui', ':xcfw'
+include ':zxcode', ':ui_demo', ':ptr_demo', ':ptr', ':banner', ':zxcode_demo', ':banner_demo', ':ui'

@@ -14,12 +14,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-
-import com.xiaocoder.android_xcfw.function.adapter.XCBaseAdapter;
-import com.xiaocoder.android_xcfw.function.listener.XCScrollListener;
-import com.xiaocoder.android_xcfw.io.XCLog;
-import com.xiaocoder.android_xcfw.util.UtilString;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -403,7 +399,7 @@ abstract public class XCRefreshLayout extends FrameLayout implements View.OnClic
             // 当前页大于等于总页数时，即最后一页
             if (base_totalPage > 1) {
                 // 如果是空数据0页，或者只有1页，则不提示
-                XCLog.shortToast("已经是最后一页了");
+                Toast.makeText(getContext(), "已经是最后一页了", Toast.LENGTH_SHORT).show();
             }
             return false;
         }
@@ -455,6 +451,15 @@ abstract public class XCRefreshLayout extends FrameLayout implements View.OnClic
         }
     }
 
+    public int toInt(String num, int defualtNum) {
+        try {
+            return Integer.parseInt(num);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return defualtNum;
+        }
+    }
+
     /**
      * 需要在http请求的返回结果中调用该方法 或者 调用setTotalNum方法也可以
      */
@@ -462,13 +467,13 @@ abstract public class XCRefreshLayout extends FrameLayout implements View.OnClic
         if (TextUtils.isEmpty(total_page)) {
             total_page = 1 + "";
         }
-        base_totalPage = UtilString.toInt(total_page, 0);
+        base_totalPage = toInt(total_page, 0);
     }
 
     public void setPerPageNum(String num) {
 
         // 默认是每页20个
-        PER_PAGE_NUM = UtilString.toInt(num, PER_PAGE_NUM);
+        PER_PAGE_NUM = toInt(num, PER_PAGE_NUM);
 
     }
 
@@ -487,7 +492,7 @@ abstract public class XCRefreshLayout extends FrameLayout implements View.OnClic
      */
     public void setTotalNum(String page_size, String total_num) {
         setPerPageNum(page_size);
-        Integer total = UtilString.toInt(total_num, 0);
+        Integer total = toInt(total_num, 0);
         base_totalPage = total % PER_PAGE_NUM == 0 ? total / PER_PAGE_NUM : (total / PER_PAGE_NUM) + 1;
     }
 

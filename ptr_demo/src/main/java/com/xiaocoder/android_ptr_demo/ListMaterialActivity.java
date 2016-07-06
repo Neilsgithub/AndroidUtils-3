@@ -39,7 +39,7 @@ public class ListMaterialActivity extends Activity {
 
         xcListRefreshLayout.getListView().setAdapter(adapter);
         // http请求中获取，这里为模拟数据
-        xcListRefreshLayout.setBgZeroHintInfo("无数据", "点击刷新", R.drawable.ic_launcher);
+        xcListRefreshLayout.setBgZeroHintInfo("无数据", "点击刷新", R.mipmap.ic_launcher);
     }
 
     public static String url = "http://yyf.7lk.com/api/goods/category-goods-list?userId=399&token=c2a623a6f3c7d6e1a126f1655c13b3f0&_m=&catId=515&_v=1.0.0&page=1&num=20&ts=1438155912203&_c=&_p=android&sig=96702f0846e8cb5d2701f5e39f28ba95";

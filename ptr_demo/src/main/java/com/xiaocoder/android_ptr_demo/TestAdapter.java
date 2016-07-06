@@ -6,7 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.xiaocoder.android_xcfw.function.adapter.XCBaseAdapter;
+
+import com.xiaocoder.android_ptr.XCBaseAdapter;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class TestAdapter extends XCBaseAdapter<TestModel> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        bean = list.get(position);
+        TestModel bean = list.get(position);
         ViewHolder holder = null;
 
         if (convertView == null) {

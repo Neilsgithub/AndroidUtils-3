@@ -37,7 +37,7 @@ public class ListRefreshActivity extends Activity {
         xcListRefreshLayout = (XCListRefreshLayout) findViewById(R.id.xc_id_list_refreshlayout);
         xcListRefreshLayout.getListView().setAdapter(adapter);
         // http请求中获取，这里为模拟数据
-        xcListRefreshLayout.setBgZeroHintInfo("无数据", "点击刷新", R.drawable.ic_launcher);
+        xcListRefreshLayout.setBgZeroHintInfo("无数据", "点击刷新", R.mipmap.ic_launcher);
 
     }
 

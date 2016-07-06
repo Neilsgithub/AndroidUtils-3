@@ -4,14 +4,14 @@
     android:id="@+id/xc_id_model_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/c_white_ffffff">
+    android:background="#ffffff">
 
 
     <com.xiaocoder.android_ptr.XCListRefreshLayout
         android:id="@+id/xc_id_list_refreshlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/c_orange_f96b05"
+        android:background="#f96b05"
         app:autorefresh="false" />
 
 
